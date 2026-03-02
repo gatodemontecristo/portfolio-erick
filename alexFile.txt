@@ -1,0 +1,21 @@
+1️⃣ Create new project (01/03/2026)
+    > yarn create vite
+
+    >TypeScript (tsc only)
+    >TypeScript + React Compiler (Experimental)
+        React Compiler is a newer tool from the React team that:
+            Analyzes your components
+            Automatically optimizes re-renders
+            Reduces the need for useMemo, useCallback, etc.
+        It’s about runtime performance optimization, not type checking.
+    >TypeScript + SWC (BETTER OPTION)
+        It can:
+            Transpile TypeScript → JavaScript
+            Transform JSX
+            Minify code
+        Frameworks that use SWC:
+            Vite (optionally)
+            Next.js
+            Turbopack
+
+git init
