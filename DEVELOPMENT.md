@@ -1,120 +1,120 @@
-# Configuración de Desarrollo - Prettier, ESLint y Husky
+# Development Configuration - Prettier, ESLint and Husky
 
-## 🛠️ Herramientas Instaladas
+## 🛠️ Installed Tools
 
 ### ✨ Prettier
 
-Formateador de código automático que mantiene un estilo consistente.
+Automatic code formatter that maintains consistent style.
 
-**Comandos disponibles:**
+**Available commands:**
 
 ```bash
-npm run format          # Formatea todo el código
-npm run format:check    # Verifica formatting sin cambios
+npm run format          # Formats all code
+npm run format:check    # Checks formatting without changes
 ```
 
 ### 🔍 ESLint
 
-Analizador de código que detecta problemas y mantiene la calidad del código.
+Code analyzer that detects problems and maintains code quality.
 
-**Comandos disponibles:**
+**Available commands:**
 
 ```bash
-npm run lint           # Analiza el código por problemas
-npm run lint:fix       # Corrige problemas automáticamente
+npm run lint           # Analyzes code for problems
+npm run lint:fix       # Fixes problems automatically
 ```
 
 ### 🪝 Husky
 
-Hooks de Git que ejecutan scripts automáticamente en eventos de Git.
+Git hooks that execute scripts automatically on Git events.
 
-**Configurado para:**
+**Configured for:**
 
-- **Pre-commit**: Ejecuta prettier y eslint automáticamente antes de cada commit
-- Formatea archivos modificados
-- Corrige errores de linting automáticamente
+- **Pre-commit**: Runs prettier and eslint automatically before each commit
+- Formats modified files
+- Fixes linting errors automatically
 
-## 📁 Archivos de Configuración
+## 📁 Configuration Files
 
 ### `.prettierrc`
 
-Configuración de Prettier con las siguientes reglas:
+Prettier configuration with the following rules:
 
-- Semi-colons activados
-- Comillas simples
-- Trailing commas en ES5
-- Ancho de línea: 80 caracteres
-- Tab width: 2 espacios
+- Semi-colons enabled
+- Single quotes
+- Trailing commas in ES5
+- Line width: 80 characters
+- Tab width: 2 spaces
 
 ### `.prettierignore`
 
-Archivos y carpetas que Prettier debe ignorar:
+Files and folders that Prettier should ignore:
 
 - node_modules, dist, build
-- Archivos de configuración del sistema
-- Logs y cache
+- System configuration files
+- Logs and cache
 
 ### `eslint.config.js`
 
-Configuración de ESLint integrada con:
+ESLint configuration integrated with:
 
 - TypeScript support
 - React hooks rules
 - Prettier integration
 - React Refresh plugin
 
-## 🚀 Uso Diario
+## 🚀 Daily Usage
 
-### Desarrollo Normal
+### Normal Development
 
-1. Escribe tu código normalmente
-2. Los hooks de Git se ejecutarán automáticamente al hacer commit
-3. Si hay errores, el commit se cancelará hasta que se corrijan
+1. Write your code normally
+2. Git hooks will run automatically when committing
+3. If there are errors, the commit will be cancelled until they are fixed
 
-### Comandos Manuales
+### Manual Commands
 
 ```bash
-# Formatear código manualmente
+# Format code manually
 npm run format
 
-# Revisar problemas de linting
+# Check linting problems
 npm run lint
 
-# Corregir problemas de linting automáticamente
+# Fix linting problems automatically
 npm run lint:fix
 ```
 
 ### Pre-commit Hook
 
-Cuando hagas `git commit`:
+When you do `git commit`:
 
-1. Husky interceptará el commit
-2. lint-staged ejecutará prettier y eslint en archivos modificados
-3. Si todo está bien, el commit continuará
-4. Si hay errores, el commit se cancelará
+1. Husky will intercept the commit
+2. lint-staged will run prettier and eslint on modified files
+3. If everything is fine, the commit will continue
+4. If there are errors, the commit will be cancelled
 
-## 🔄 Flujo de Trabajo Automático
+## 🔄 Automatic Workflow
 
 ```mermaid
 graph TD
-    A[Modificas código] --> B[git add .]
+    A[Modify code] --> B[git add .]
     B --> C[git commit]
-    C --> D[Husky intercepta]
-    D --> E[lint-staged ejecuta]
-    E --> F[Prettier formatea]
-    F --> G[ESLint verifica]
-    G --> H{¿Errores?}
-    H -->|No| I[Commit exitoso ✅]
-    H -->|Sí| J[Commit cancelado ❌]
-    J --> K[Corrige errores]
+    C --> D[Husky intercepts]
+    D --> E[lint-staged executes]
+    E --> F[Prettier formats]
+    F --> G[ESLint verifies]
+    G --> H{Errors?}
+    H -->|No| I[Successful commit ✅]
+    H -->|Yes| J[Cancelled commit ❌]
+    J --> K[Fix errors]
     K --> C
 ```
 
-## 💡 Consejos
+## 💡 Tips
 
-1. **Configura tu editor** para formatear al guardar con Prettier
-2. **Instala extensiones** de VS Code para Prettier y ESLint
-3. **No ignores los errores** de ESLint, úsalos para mejorar tu código
-4. **Los hooks son automáticos**, no necesitas recordar ejecutar comandos
+1. **Configure your editor** to format on save with Prettier
+2. **Install extensions** for VS Code for Prettier and ESLint
+3. **Don't ignore ESLint errors**, use them to improve your code
+4. **Hooks are automatic**, you don't need to remember to run commands
 
-¡Tu proyecto ahora tiene un flujo de trabajo de desarrollo profesional! 🎉
+Your project now has a professional development workflow! 🎉

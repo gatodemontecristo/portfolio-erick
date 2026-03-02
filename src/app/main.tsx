@@ -5,6 +5,10 @@ import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <div
+      className="h-screen pointer-events-none noise"
+      style={{ display: 'block' }}
+    ></div>
     <App />
   </StrictMode>
 );
