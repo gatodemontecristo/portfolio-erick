@@ -1,0 +1,139 @@
+@import 'tailwindcss';
+
+/* Orbitron Font Family */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../assets/fonts/Orbitron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../assets/fonts/Orbitron-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../assets/fonts/Orbitron-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../assets/fonts/Orbitron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../assets/fonts/Orbitron-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../assets/fonts/Orbitron-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-magazine-white: #ffffff;
+  --color-magazine-gray: #fff8df;
+  --color-magazine-dark: #333;
+
+  --font-orbitron: 'Orbitron', monospace;
+  --font-sans: 'Orbitron', system-ui, -apple-system, sans-serif;
+}
+
+/* Apply Orbitron globally */
+body {
+  font-family: 'Orbitron', monospace;
+  background-color: var(--color-magazine-gray);
+}
+.background-container {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff8df;
+  border-radius: 20px;
+  background-color: #242424;
+  background-image:
+    url('../assets/background/dust-and-scratches-2.png'),
+    url('../assets/background/dots.svg');
+  background-position:
+    50% 50%,
+    50% 50%;
+  background-size: auto, auto;
+  background-repeat: repeat, repeat;
+  background-attachment: scroll, scroll;
+}
+
+.noise {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 100;
+  display: none;
+  height: 100vh;
+  opacity: 0.4;
+  mix-blend-mode: difference;
+}
+.noise::before {
+  content: '';
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://herdl.com/wp-content/uploads/2020/11/noise-web.webp);
+  -webkit-animation: 90ms infinite noise;
+  animation: 90ms infinite noise;
+}
+@keyframes noise {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  10% {
+    background-position: -5% -10%;
+  }
+  20% {
+    background-position: -15% 5%;
+  }
+  30% {
+    background-position: 7% -25%;
+  }
+  40% {
+    background-position: 20% 25%;
+  }
+  50% {
+    background-position: -25% 10%;
+  }
+  60% {
+    background-position: 15% 5%;
+  }
+  70% {
+    background-position: 0 15%;
+  }
+  80% {
+    background-position: 25% 35%;
+  }
+  990% {
+    background-position: -10% 10%;
+  }
+}
