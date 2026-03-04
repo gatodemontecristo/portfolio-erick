@@ -7,7 +7,7 @@ export interface CarouselTecItemProps {
 
 export const CarouselTecItem = ({ name, icon: Icon }: CarouselTecItemProps) => {
   return (
-    <div className="flex flex-row items-center justify-center gap-2">
+    <div className="flex flex-row items-center justify-center gap-5">
       <p>{name}</p>
       <Icon className="size-6" />
     </div>
