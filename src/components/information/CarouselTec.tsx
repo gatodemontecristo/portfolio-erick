@@ -5,7 +5,7 @@ interface CarouselTecProps {
 }
 export const CarouselTec = ({ items }: CarouselTecProps) => {
   return (
-    <div className="flex flex-row overflow-hidden border-2 gap-4 border-magazine-gray bg-magazine-dark text-magazine-white rounded-lg p-4 mb-4">
+    <div className="flex flex-row overflow-hidden border-2 gap-4 border-magazine-gray bg-magazine-dark text-magazine-gray rounded-lg p-4 mb-4">
       {items.map((item, index) => (
         <CarouselTecItem key={index} {...item} />
       ))}

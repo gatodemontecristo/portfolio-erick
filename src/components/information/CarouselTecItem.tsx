@@ -8,7 +8,7 @@ export interface CarouselTecItemProps {
 export const CarouselTecItem = ({ name, icon: Icon }: CarouselTecItemProps) => {
   return (
     <div className="flex flex-row items-center justify-center gap-5">
-      <p>{name}</p>
+      <p className="whitespace-nowrap overflow-hidden text-ellipsis">{name}</p>
       <Icon className="size-6" />
     </div>
   );
