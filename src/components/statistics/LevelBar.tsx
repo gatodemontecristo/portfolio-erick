@@ -1,11 +1,13 @@
+import { nanoid } from 'nanoid';
+
 interface LevelBarProps {
   level: number;
 }
 
 const generateLevelBars = (level: number, type: 'filled' | 'empty') => {
-  return Array.from({ length: level }, (_, index) => (
+  return Array.from({ length: level }, () => (
     <div
-      key={index}
+      key={nanoid()}
       className={`h-8 w-4 ${type === 'filled' ? 'bg-magazine-gray' : 'border-2 border-magazine-gray bg-none"'}`}
     ></div>
   ));

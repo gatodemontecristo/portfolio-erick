@@ -1,9 +1,20 @@
 import { ImMan } from 'react-icons/im';
-import { CarouselTec, LevelBar, LiveClockPeru, MainTitle } from '../components';
-import { TECHNOLOGIES_1, TECHNOLOGIES_2 } from '../constants';
+import {
+  CarouselTec,
+  LevelBar,
+  LiveClockPeru,
+  MainTitle,
+  TecStatistic,
+} from '../components';
+import {
+  TECHNOLOGIES_1,
+  TECHNOLOGIES_2,
+  TECHNOLOGIES_EXPERIENCE,
+} from '../constants';
 import { TbClockHour7Filled } from 'react-icons/tb';
 import { SiTypescript } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa6';
+import { nanoid } from 'nanoid';
 
 function App() {
   return (
@@ -53,6 +64,14 @@ function App() {
                 <p>7 years</p>
               </div>
             </div>
+
+            {TECHNOLOGIES_EXPERIENCE.map(tech => (
+              <div className="flex flex-row  w-full" key={nanoid()}>
+                <TecStatistic {...tech.pair1}></TecStatistic>
+                {tech.pair2 && <TecStatistic {...tech.pair2}></TecStatistic>}
+              </div>
+            ))}
+
             <div className="flex flex-row  w-full">
               <div className="w-2/6 flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-semibold text-xl border-magazine-gray bg-magazine-dark p-4">
                 <p>Typescript</p>

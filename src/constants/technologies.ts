@@ -187,7 +187,7 @@ interface TechnologyExperienceProps {
   pair1: TechnologyExperienceItemProps;
   pair2?: TechnologyExperienceItemProps;
 }
-interface TechnologyExperienceItemProps {
+export interface TechnologyExperienceItemProps {
   name: string;
   icon: IconType;
   level: number;
