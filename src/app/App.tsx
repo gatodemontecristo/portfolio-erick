@@ -35,6 +35,7 @@ function App() {
             name: tech.name,
             icon: tech.icon,
           }))}
+          reverse
         ></CarouselTec>
 
         <div className="flex flex-row border-2 border-magazine-gray rounded-lg overflow-hidden">
