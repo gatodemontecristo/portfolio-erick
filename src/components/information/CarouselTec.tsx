@@ -122,7 +122,7 @@ export const CarouselTec = ({ items, reverse = false }: CarouselTecProps) => {
   return (
     <div
       ref={containerRef}
-      className={`overflow-hidden border-2 border-magazine-gray bg-magazine-dark text-magazine-gray rounded-lg p-4 mb-4`}
+      className={`overflow-hidden border-2 border-magazine-white bg-magazine-dark text-magazine-gray rounded-lg p-4 mb-4`}
     >
       <motion.div
         ref={itemsContainerRef}
