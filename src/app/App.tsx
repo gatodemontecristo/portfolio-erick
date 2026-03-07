@@ -1,10 +1,11 @@
 import { ImMan } from 'react-icons/im';
 import {
   CarouselTec,
-  LiveClockPeru,
   MainTitle,
   ScrollVelocity,
   AnimatedTecStatistics,
+  Portrait,
+  InformationBox,
 } from '../components';
 import {
   TECHNOLOGIES_1,
@@ -38,44 +39,21 @@ function App() {
         ></CarouselTec>
 
         <div className="flex flex-row border-2 border-magazine-gray rounded-lg overflow-hidden">
-          <div className="w-1/2  bg-[url('./photo-erick.jpeg')] bg-cover bg-center"></div>
+          <Portrait></Portrait>
           <div className="flex flex-col w-1/2 text-magazine-white">
             <div className="flex flex-row  w-full">
-              <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-semibold text-2xl border-magazine-gray text-magazine-gray bg-magazine-dark p-4">
-                <DecryptedText
-                  text="Age"
-                  speed={120}
-                  animateOn="both"
-                  revealDirection="start"
-                  sequential
-                  useOriginalCharsOnly={false}
-                />
-                <ImMan></ImMan>
-              </div>
-              <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2 gap-4 font-semibold text-2xl border-magazine-gray text-magazine-gray bg-magazine-dark p-4">
-                <DecryptedText
-                  text="29"
-                  speed={120}
-                  animateOn="both"
-                  revealDirection="start"
-                  sequential
-                  useOriginalCharsOnly={false}
-                />
-              </div>
-              <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2 gap-4 font-semibold text-2xl border-magazine-gray text-magazine-gray bg-magazine-dark p-4">
-                <DecryptedText
-                  text="Hour"
-                  speed={120}
-                  animateOn="both"
-                  revealDirection="start"
-                  sequential
-                  useOriginalCharsOnly={false}
-                />
-                <TbClockHour7Filled></TbClockHour7Filled>
-              </div>
-              <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2 gap-4 font-semibold text-2xl border-magazine-gray text-magazine-gray bg-magazine-dark p-4">
-                <LiveClockPeru />
-              </div>
+              <InformationBox
+                label="Age"
+                type="info"
+                icon={<ImMan></ImMan>}
+              ></InformationBox>
+              <InformationBox label="29" type="info"></InformationBox>
+              <InformationBox
+                label="Hour"
+                type="info"
+                icon={<TbClockHour7Filled></TbClockHour7Filled>}
+              ></InformationBox>
+              <InformationBox type="clock"></InformationBox>
             </div>
             <div className="flex flex-row  w-full">
               <div className="w-full flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-bold text-4xl border-magazine-gray text-magazine-gray bg-magazine-dark p-8">
