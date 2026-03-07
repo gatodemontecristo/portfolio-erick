@@ -1,7 +1,6 @@
 import { ImMan } from 'react-icons/im';
 import {
   CarouselTec,
-  LevelBar,
   LiveClockPeru,
   MainTitle,
   ScrollVelocity,
@@ -13,9 +12,8 @@ import {
   TECHNOLOGIES_EXPERIENCE,
 } from '../constants';
 import { TbClockHour7Filled } from 'react-icons/tb';
-import { SiTypescript } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa6';
 import { nanoid } from 'nanoid';
+import DecryptedText from '../components/gsap/DecryptedText';
 
 function App() {
   return (
@@ -45,20 +43,39 @@ function App() {
         ></CarouselTec>
 
         <div className="flex flex-row border-2 border-magazine-gray rounded-lg overflow-hidden">
-          <div className="w-1/2">
-            <img src="./photo-erick.jpeg" alt="Profile" />
-          </div>
+          <div className="w-1/2  bg-[url('./photo-erick.jpeg')] bg-cover bg-center"></div>
           <div className="flex flex-col w-1/2 text-magazine-white">
             <div className="flex flex-row  w-full">
               <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-semibold text-2xl border-magazine-gray bg-magazine-dark p-4">
-                <p>Age</p>
+                <DecryptedText
+                  text="Age"
+                  speed={120}
+                  animateOn="both"
+                  revealDirection="start"
+                  sequential
+                  useOriginalCharsOnly={false}
+                />
                 <ImMan></ImMan>
               </div>
               <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2 gap-4 font-semibold text-2xl border-magazine-gray bg-magazine-dark p-4">
-                <p>29</p>
+                <DecryptedText
+                  text="29"
+                  speed={120}
+                  animateOn="both"
+                  revealDirection="start"
+                  sequential
+                  useOriginalCharsOnly={false}
+                />
               </div>
               <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2 gap-4 font-semibold text-2xl border-magazine-gray bg-magazine-dark p-4">
-                <p>Hour</p>
+                <DecryptedText
+                  text="Hour"
+                  speed={120}
+                  animateOn="both"
+                  revealDirection="start"
+                  sequential
+                  useOriginalCharsOnly={false}
+                />
                 <TbClockHour7Filled></TbClockHour7Filled>
               </div>
               <div className="w-1/4 flex flex-row items-center justify-center border-r-2 border-b-2 gap-4 font-semibold text-2xl border-magazine-gray bg-magazine-dark p-4">
@@ -67,8 +84,14 @@ function App() {
             </div>
             <div className="flex flex-row  w-full">
               <div className="w-full flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-bold text-4xl border-magazine-gray bg-magazine-dark p-8">
-                <p>Work experience</p>
-                <p>7 years</p>
+                <DecryptedText
+                  text="Work experience 7 years"
+                  speed={120}
+                  animateOn="both"
+                  revealDirection="start"
+                  sequential
+                  useOriginalCharsOnly={false}
+                />
               </div>
             </div>
 
@@ -78,20 +101,6 @@ function App() {
                 {tech.pair2 && <TecStatistic {...tech.pair2}></TecStatistic>}
               </div>
             ))}
-
-            <div className="flex flex-row  w-full">
-              <div className="w-2/6 flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-semibold text-xl border-magazine-gray bg-magazine-dark p-4">
-                <p>Typescript</p>
-                <SiTypescript></SiTypescript>
-              </div>
-              <LevelBar level={4}></LevelBar>
-
-              <div className="w-2/6 flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-semibold text-xl border-magazine-gray bg-magazine-dark p-4">
-                <p>React</p>
-                <FaReact></FaReact>
-              </div>
-              <LevelBar level={3}></LevelBar>
-            </div>
           </div>
         </div>
         <p className="text-4xl text-magazine-white font-bold underline">

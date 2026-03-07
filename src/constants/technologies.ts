@@ -25,7 +25,7 @@ import {
   SiJira,
   SiPnpm,
 } from 'react-icons/si';
-import { TbCircleLetterBFilled } from 'react-icons/tb';
+import { TbBrandReactNative, TbCircleLetterBFilled } from 'react-icons/tb';
 import { IoLogoFirebase } from 'react-icons/io5';
 import type { IconType } from 'react-icons/lib';
 
@@ -112,6 +112,10 @@ export const TECHNOLOGIES_2: CarouselTecItemProps[] = [
   {
     name: 'AWS',
     icon: FaAws,
+  },
+  {
+    name: 'React Native',
+    icon: TbBrandReactNative,
   },
   {
     name: 'Node.js',
@@ -203,6 +207,66 @@ export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [
     pair2: {
       name: 'React',
       icon: FaReact,
+      level: 3,
+    },
+  },
+  {
+    pair1: {
+      name: 'Zustand',
+      icon: GiBearFace,
+      level: 4,
+    },
+    pair2: {
+      name: 'TanStack',
+      icon: GiIsland,
+      level: 3,
+    },
+  },
+  {
+    pair1: {
+      name: 'AWS',
+      icon: FaAws,
+      level: 4,
+    },
+    pair2: {
+      name: 'Docker',
+      icon: FaDocker,
+      level: 3,
+    },
+  },
+  {
+    pair1: {
+      name: 'Jest',
+      icon: SiJest,
+      level: 4,
+    },
+    pair2: {
+      name: 'Tailwind CSS',
+      icon: SiTailwindcss,
+      level: 3,
+    },
+  },
+  {
+    pair1: {
+      name: 'Jest',
+      icon: SiJest,
+      level: 4,
+    },
+    pair2: {
+      name: 'Tailwind CSS',
+      icon: SiTailwindcss,
+      level: 3,
+    },
+  },
+  {
+    pair1: {
+      name: 'Next.js',
+      icon: SiNextdotjs,
+      level: 4,
+    },
+    pair2: {
+      name: 'React Native',
+      icon: TbBrandReactNative,
       level: 3,
     },
   },
