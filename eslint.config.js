@@ -8,7 +8,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'node_modules'],
+    ignores: ['dist', 'node_modules', 'src/components/gsap/**'],
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
