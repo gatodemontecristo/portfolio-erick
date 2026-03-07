@@ -4,6 +4,7 @@ import {
   LevelBar,
   LiveClockPeru,
   MainTitle,
+  ScrollVelocity,
   TecStatistic,
 } from '../components';
 import {
@@ -26,7 +27,12 @@ function App() {
             icon: tech.icon,
           }))}
         ></CarouselTec>
-        <div className="flex flex-row w-full items-center justify-evenly  mb-4">
+        <ScrollVelocity
+          texts={['React Bits', 'Scroll Down']}
+          velocity={100}
+          className="custom-scroll-text"
+        />
+        <div className="flex flex-row w-full h-67.5 items-center justify-evenly mb-10">
           <MainTitle text="Hello, I'm Erick Dejo from Peru" />
           <MainTitle text="A front-end web/mobile developer" />
         </div>
@@ -35,6 +41,7 @@ function App() {
             name: tech.name,
             icon: tech.icon,
           }))}
+          reverse
         ></CarouselTec>
 
         <div className="flex flex-row border-2 border-magazine-gray rounded-lg overflow-hidden">
