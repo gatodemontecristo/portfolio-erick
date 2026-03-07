@@ -6,6 +6,7 @@ import {
   AnimatedTecStatistics,
   Portrait,
   InformationBox,
+  LogoLoop,
 } from '../components';
 import {
   TECHNOLOGIES_1,
@@ -14,8 +15,43 @@ import {
 } from '../constants';
 import { TbClockHour7Filled } from 'react-icons/tb';
 import DecryptedText from '../components/gsap/DecryptedText';
+import MagnetLines from '../components/gsap/MagnetLines';
+import {
+  FaGithub,
+  FaGoodreads,
+  FaLetterboxd,
+  FaLinkedin,
+} from 'react-icons/fa6';
+import { SiLeetcode } from 'react-icons/si';
 
 function App() {
+  const techLogos = [
+    {
+      node: <FaLetterboxd />,
+      title: 'Letterboxd',
+      href: 'https://letterboxd.com/CondeDeLosMango/',
+    },
+    {
+      node: <FaGithub />,
+      title: 'Github',
+      href: 'https://github.com/gatodemontecristo',
+    },
+    {
+      node: <FaLinkedin />,
+      title: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/erick-dejo-vicente-b819601b6/',
+    },
+    {
+      node: <SiLeetcode />,
+      title: 'LeetCode',
+      href: 'https://leetcode.com/u/gatodemontecristo/',
+    },
+    {
+      node: <FaGoodreads />,
+      title: 'Goodreads',
+      href: 'https://www.goodreads.com/user/show/194773351-erick-dejo',
+    },
+  ];
   return (
     <div className="background-container p-4">
       <div>
@@ -85,6 +121,40 @@ function App() {
           velocity={100}
           className="custom-scroll-text"
         />
+      </div>
+
+      <div
+        className={`overflow-hidden flex flex-row border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4`}
+      >
+        <div className="flex flex-col p-4 w-1/4 border-r-2 border-magazine-gray">
+          <MagnetLines
+            rows={10}
+            columns={10}
+            containerSize="20vmin"
+            lineColor="#fff8df"
+            lineWidth="2px"
+            lineHeight="10px"
+            baseAngle={0}
+            style={{ margin: '0rem auto' }}
+          />{' '}
+        </div>
+        <div className="flex flex-col justify-center items-center w-3/4 p-4 gap-4">
+          <p className="text-xl">My social networks</p>
+          <div className="relative w-full">
+            <LogoLoop
+              logos={techLogos}
+              speed={100}
+              direction="left"
+              logoHeight={60}
+              gap={60}
+              hoverSpeed={0}
+              scaleOnHover
+              fadeOut={false}
+              fadeOutColor="#ffffff"
+              ariaLabel="Technology partners"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
