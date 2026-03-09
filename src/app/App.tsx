@@ -25,6 +25,12 @@ import {
 import { SiLeetcode } from 'react-icons/si';
 import Cubes from '../components/gsap/Cubes';
 
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
 function App() {
   const techLogos = [
     {
@@ -191,6 +197,148 @@ function App() {
           </div>
         </div>
       </div>
+      <VerticalTimeline className="text-magazine-white">
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#fff8df ', color: '#333' }}
+          contentArrowStyle={{ borderRight: '7px solid  #fff8df ' }}
+          date="Mar 2024 - Present"
+          dateClassName="text-magazine-white"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={
+            <img
+              src="./logos/softtek.webp"
+              alt="Softtek logo"
+              style={{ width: '100%', height: '100%' }}
+              className="rounded-full"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title">
+            Frontend Developer React JS
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Softtek - Fulltime
+          </h4>
+          <p>
+            Led the redesign of a health insurance case management platform
+            (React.js, TypeScript, Tailwind CSS, SPA), improving accessibility
+            and responsiveness, resulting in a 20% productivity boost.
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#fff8df ', color: '#333' }}
+          contentArrowStyle={{ borderRight: '7px solid  #fff8df ' }}
+          date="Marz 2023 - Mar 2024"
+          dateClassName="text-magazine-white"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={
+            <img
+              src="./logos/cibertec.png"
+              alt="Cibertec logo"
+              style={{ width: '100%', height: '100%' }}
+              className="rounded-full"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title">Cibertec</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Front-End React Instructor
+          </h4>
+          <p>
+            Directed a 3-member team to redesign the React course rubric,
+            increasing student engagement by 30% and boosting enrollment in
+            advanced programming courses.
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#fff8df ', color: '#333' }}
+          contentArrowStyle={{ borderRight: '7px solid  #fff8df ' }}
+          date="Nov 2021 - Mar 2024"
+          dateClassName="text-magazine-white"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={
+            <img
+              src="./logos/fiverr.png"
+              alt="Fiveer logo"
+              style={{ width: '100%', height: '100%' }}
+              className="rounded-full"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title">Fiveer</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Freelance Full Stack Web Developer
+          </h4>
+          <p>
+            Web application development in Javascript using Github repositories,
+            interface design with React, CSS and HTML, functionalities with
+            jQuery and PHP libraries, and publication of the project on
+            Hostinger.
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#fff8df ', color: '#333' }}
+          contentArrowStyle={{ borderRight: '7px solid  #fff8df ' }}
+          date="Jun 2022 - Sep 2022"
+          dateClassName="text-magazine-white"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={
+            <img
+              src="./logos/ntt_data.jpg"
+              alt="NTT DATA logo"
+              style={{ width: '100%', height: '100%' }}
+              className="rounded-full"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title">NTT DATA</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Salesforce Developer
+          </h4>
+          <p>Bootcamp XI</p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#fff8df ', color: '#333' }}
+          contentArrowStyle={{ borderRight: '7px solid  #fff8df ' }}
+          date="Mar 2017 - Nov 2021"
+          dateClassName="text-magazine-white"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={
+            <img
+              src="./logos/rivercon.jpg"
+              alt="Rivercon.com logo"
+              style={{ width: '100%', height: '100%' }}
+              className="rounded-full"
+            />
+          }
+        >
+          <h3 className="vertical-timeline-element-title">Rivercon.com</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Software Engineer
+          </h4>
+          <p>
+            Built responsive web applications (React.js, Yarn, SPA
+            architecture), improving workflow efficiency for industrial clients
+            by 10%.
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          iconStyle={{ background: '#fff8df', color: '#fff' }}
+          icon={
+            <img
+              src="./icon-erick.png"
+              alt="Erick's logo"
+              style={{ width: '100%', height: '100%' }}
+              className="rounded-full"
+            />
+          }
+        />
+      </VerticalTimeline>
     </div>
   );
 }
