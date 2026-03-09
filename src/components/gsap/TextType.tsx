@@ -1,5 +1,4 @@
-import {
-  ElementType,
+import React, {
   useEffect,
   useRef,
   useState,
@@ -17,7 +16,7 @@ interface TextTypeProps {
   cursorBlinkDuration?: number;
   cursorClassName?: string;
   text: string | string[];
-  as?: ElementType;
+  as?: React.ElementType;
   typingSpeed?: number;
   initialDelay?: number;
   pauseDuration?: number;

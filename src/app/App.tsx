@@ -26,10 +26,20 @@ import {
 } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
 import Cubes from '../components/gsap/Cubes';
+import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
 
 function App() {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resumeFile;
+    link.download = 'ERICK_DEJO_CV_2025.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const techLogos = [
     {
       node: <FaLetterboxd />,
@@ -143,7 +153,15 @@ function App() {
             />{' '}
           </div>
           <div className="flex flex-col justify-center items-center w-3/4 p-4 gap-4">
-            <p className="text-xl">My social networks</p>
+            <DecryptedText
+              text="My social networks"
+              speed={60}
+              animateOn="both"
+              revealDirection="start"
+              sequential
+              useOriginalCharsOnly={false}
+              className="text-2xl text-magazine-gray"
+            />
             <div className="relative w-full">
               <LogoLoop
                 logos={techLogos}
@@ -163,15 +181,23 @@ function App() {
         <div className={`overflow-hidden flex flex-row `}>
           <div className="flex flex-row justify-center items-center w-3/4 bg-magazine-gray gap-4 border-e-2 border-magazine-gray">
             <div className="flex flex-row justify-center items-center gap-4">
-              <div className="flex flex-col gap-1">
-                <p className="text-xl text-magazine-dark">
-                  This is my resume, let's stay in touch!
-                </p>
-                <button className="bg-magazine-dark py-2 cursor-pointer hover:bg-[#474747]">
+              <div className="flex flex-col gap-1 text-2xl text-magazine-dark">
+                <DecryptedText
+                  text="This is my resume, let's stay in touch!"
+                  speed={60}
+                  animateOn="both"
+                  revealDirection="start"
+                  sequential
+                  useOriginalCharsOnly={false}
+                />
+                <button
+                  onClick={handleDownloadResume}
+                  className="bg-magazine-dark text-2xl py-2 cursor-pointer hover:bg-[#474747] text-magazine-gray"
+                >
                   Download Resume
                 </button>
               </div>
-              <div className="w-25 flex flex-col">
+              <div className="w-30 flex flex-col">
                 <img src="./cartoon.png" alt="Erick cartoon 60's" />
               </div>
             </div>

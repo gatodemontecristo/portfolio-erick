@@ -123,7 +123,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     });
 
     const directionFactor = useRef<number>(1);
-    useAnimationFrame((t, delta) => {
+    useAnimationFrame((_, delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {
@@ -140,7 +140,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     for (let i = 0; i < numCopies!; i++) {
       spans.push(
         <span
-          className={`flex-shrink-0 ${className}`}
+          className={`shrink-0 ${className}`}
           key={i}
           ref={i === 0 ? copyRef : null}
         >
