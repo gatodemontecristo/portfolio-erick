@@ -21,6 +21,7 @@ import MagnetLines from '../components/gsap/MagnetLines';
 import {
   FaGithub,
   FaGoodreads,
+  FaHtml5,
   FaLetterboxd,
   FaLinkedin,
 } from 'react-icons/fa6';
@@ -29,6 +30,7 @@ import Cubes from '../components/gsap/Cubes';
 import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
+import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
 function App() {
   const handleDownloadResume = () => {
@@ -136,6 +138,71 @@ function App() {
           velocity={100}
           className="custom-scroll-text"
         />
+      </div>
+      <div className="flex flex-row flex-wrap w-full">
+        <div className="flex flex-col p-4 border-2 w-1/3 border-magazine-gray bg-magazine-dark rounded-lg gap-2">
+          <div className="flex flex-row w-full items-center justify-between ">
+            <div className=" bg-magazine-gray rounded-lg p-2 w-min-[150px]">
+              <p>Gunbound</p>
+            </div>
+            <div className="flex flex-row gap-2 justify-end items-center">
+              <p className="text-magazine-gray text-lg">Mobile</p>
+              <div className="h-15 w-15  rounded-full">
+                <img src="./cartoon/smartphone.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full items-center justify-between pe-2">
+            <div className="text-magazine-gray border-2 border-magazine-gray rounded-lg p-2 w-min-[150px]">
+              <p>Stack</p>
+            </div>
+            <div className="flex flex-row items-center justify-end gap-1">
+              <div className="flex flex-col items-center justify-center bg-magazine-gray text-magazine-dark p-2">
+                <FaHtml5 className="size-6" />
+              </div>
+              <div className="flex flex-col items-center justify-center bg-magazine-gray text-magazine-dark p-2">
+                <FaHtml5 className="size-6" />
+              </div>
+              <div className="flex flex-col items-center justify-center bg-magazine-gray text-magazine-dark p-2">
+                <FaHtml5 className="size-6" />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-magazine-white">
+              Website built using only HTML and CSS (HTML5, CSS3) Web
+              Architecture and Environments Cibertec - Gunbound Project
+            </p>
+            <div className="flex flex-row w-full items-center justify-center gap-5">
+              <a
+                href="https://github.com/gatodemontecristo/Gunbound"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="underline text-magazine-white flex flex-row items-center">
+                  <MdKeyboardDoubleArrowRight />
+                  <span>Repository</span>
+                </p>
+              </a>
+              <a
+                href="https://gatodemontecristo.github.io/Gunbound/paginas/gunbound.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="underline text-magazine-white flex flex-row items-center">
+                  <MdKeyboardDoubleArrowRight />
+                  <span>Demo</span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-row rounded-lg overflow-hidden m-2">
+            <img
+              src="./projects/gunbound.png"
+              alt="Gunbound project screenshot"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4">
