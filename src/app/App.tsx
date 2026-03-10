@@ -8,9 +8,12 @@ import {
   InformationBox,
   LogoLoop,
   TimeLine,
+  CardProject,
 } from '../components';
 import {
   EXPERIENCE,
+  PERSONAL_PROJECTS,
+  TECHLOGOS,
   TECHNOLOGIES_1,
   TECHNOLOGIES_2,
   TECHNOLOGIES_EXPERIENCE,
@@ -18,17 +21,11 @@ import {
 import { TbClockHour7Filled } from 'react-icons/tb';
 import DecryptedText from '../components/gsap/DecryptedText';
 import MagnetLines from '../components/gsap/MagnetLines';
-import {
-  FaGithub,
-  FaGoodreads,
-  FaLetterboxd,
-  FaLinkedin,
-} from 'react-icons/fa6';
-import { SiLeetcode } from 'react-icons/si';
 import Cubes from '../components/gsap/Cubes';
 import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
+import { nanoid } from 'nanoid';
 
 function App() {
   const handleDownloadResume = () => {
@@ -40,33 +37,6 @@ function App() {
     document.body.removeChild(link);
   };
 
-  const techLogos = [
-    {
-      node: <FaLetterboxd />,
-      title: 'Letterboxd',
-      href: 'https://letterboxd.com/CondeDeLosMango/',
-    },
-    {
-      node: <FaGithub />,
-      title: 'Github',
-      href: 'https://github.com/gatodemontecristo',
-    },
-    {
-      node: <FaLinkedin />,
-      title: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/erick-dejo-vicente-b819601b6/',
-    },
-    {
-      node: <SiLeetcode />,
-      title: 'LeetCode',
-      href: 'https://leetcode.com/u/gatodemontecristo/',
-    },
-    {
-      node: <FaGoodreads />,
-      title: 'Goodreads',
-      href: 'https://www.goodreads.com/user/show/194773351-erick-dejo',
-    },
-  ];
   return (
     <div className="background-container p-4">
       <div>
@@ -137,6 +107,11 @@ function App() {
           className="custom-scroll-text"
         />
       </div>
+      <div className="flex flex-row flex-wrap w-full mb-10 gap-4 justify-center items-center">
+        {PERSONAL_PROJECTS.map(project => (
+          <CardProject key={nanoid()} project={project} />
+        ))}
+      </div>
 
       <div className="flex flex-col border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4">
         <div className={`overflow-hidden flex flex-row border-b-2`}>
@@ -164,7 +139,7 @@ function App() {
             />
             <div className="relative w-full">
               <LogoLoop
-                logos={techLogos}
+                logos={TECHLOGOS}
                 speed={100}
                 direction="left"
                 logoHeight={60}
