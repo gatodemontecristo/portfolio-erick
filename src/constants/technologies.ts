@@ -51,7 +51,7 @@ export const TECHNOLOGIES_1: CarouselTecItemProps[] = [
     icon: GiBearFace,
   },
   {
-    name: 'React Query',
+    name: 'TanStack',
     icon: GiIsland,
   },
   {
@@ -192,10 +192,49 @@ interface TechnologyExperienceProps {
   pair2?: TechnologyExperienceItemProps;
 }
 export interface TechnologyExperienceItemProps {
-  name: string;
+  name: TechnologyExperience;
   icon: IconType;
   level: number;
 }
+
+export type TechnologyExperience =
+  | (typeof TECHNOLOGIES_1)[number]['name']
+  | (typeof TECHNOLOGIES_2)[number]['name'];
+
+export const TypeIcon = {
+  web: './cartoon/computer.png',
+  mobile: './cartoon/smartphone.png',
+  fullstack: './cartoon/web-page.png',
+};
+export const TechnologyIconByName: Record<TechnologyExperience, IconType> = {
+  JavaScript: SiJavascript,
+  React: FaReact,
+  Typescript: SiTypescript,
+  Redux: SiRedux,
+  Zustand: GiBearFace,
+  TanStack: GiIsland,
+  'Tailwind CSS': SiTailwindcss,
+  Bootstrap: TbCircleLetterBFilled,
+  Yarn: SiYarn,
+  'React Router': SiReactrouter,
+  'React Hook Form': GiPlatform,
+  CSS: FaCss,
+  HTML: FaHtml5,
+  AWS: FaAws,
+  'Node.js': FaNodeJs,
+  Jest: SiJest,
+  Bun: SiBun,
+  'Next.js': SiNextdotjs,
+  Storybook: SiStorybook,
+  'React Native': TbBrandReactNative,
+  Firebase: IoLogoFirebase,
+  SonarQube: SiSonarqubeforide,
+  Jira: SiJira,
+  Figma: FaFigma,
+  Docker: FaDocker,
+  GitHub: FaGithub,
+  pnpm: SiPnpm,
+};
 
 export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [
   {
