@@ -107,7 +107,7 @@ function App() {
           className="custom-scroll-text"
         />
       </div>
-      <div className="flex flex-row flex-wrap w-full mb-10 gap-4 justify-center items-center">
+      <div className="flex flex-row flex-wrap w-full mb-10 gap-4 justify-center items-stretch">
         {PERSONAL_PROJECTS.map(project => (
           <CardProject key={nanoid()} project={project} />
         ))}
