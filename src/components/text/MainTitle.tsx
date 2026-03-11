@@ -5,7 +5,7 @@ interface MainTitleProps {
 }
 export const MainTitle = ({ text }: MainTitleProps) => {
   return (
-    <div className="w-[45%]">
+    <div className="md:w-[45%] w-full">
       <TextType
         text={[text]}
         typingSpeed={75}
@@ -16,7 +16,7 @@ export const MainTitle = ({ text }: MainTitleProps) => {
         variableSpeed={{ min: 60, max: 120 }}
         cursorBlinkDuration={0.5}
         loop={false}
-        className="text-magazine-gray text-8xl font-extrabold text-start"
+        className="text-magazine-gray md:text-8xl text-4xl md:font-extrabold font-semibold md:text-start text-center"
       />
       {/* <p className="text-magazine-gray text-8xl font-extrabold text-start">
         {text}

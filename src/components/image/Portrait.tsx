@@ -12,10 +12,10 @@ export const Portrait = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
 
   return (
-    <div ref={ref} className="w-1/2 overflow-hidden">
+    <div ref={ref} className="md:w-1/2 w-full overflow-hidden">
       <motion.div
         style={{ scale }}
-        className="h-full bg-[url('./photo-erick.jpeg')] bg-cover bg-center"
+        className="md:h-full h-[50vh]  bg-[url('./photo-erick.jpeg')] bg-cover bg-center"
       />
     </div>
   );

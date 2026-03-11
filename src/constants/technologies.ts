@@ -3,6 +3,7 @@ import {
   FaCss,
   FaFigma,
   FaGithub,
+  FaGoogle,
   FaHtml5,
   FaNodeJs,
 } from 'react-icons/fa6';
@@ -26,10 +27,13 @@ import {
   SiPnpm,
   SiNetlify,
   SiVite,
+  SiPrisma,
+  SiExpress,
 } from 'react-icons/si';
 import { TbBrandReactNative, TbCircleLetterBFilled } from 'react-icons/tb';
 import { IoLogoFirebase } from 'react-icons/io5';
 import type { IconType } from 'react-icons/lib';
+import { BiLogoPostgresql } from 'react-icons/bi';
 
 export const TECHNOLOGIES_1: CarouselTecItemProps[] = [
   {
@@ -108,6 +112,9 @@ export const TECHNOLOGIES_1: CarouselTecItemProps[] = [
     name: 'Storybook',
     icon: SiStorybook,
   },
+  { name: 'Google', icon: FaGoogle },
+  { name: 'Firebase', icon: SiPrisma },
+  { name: 'Express', icon: SiExpress },
 ];
 
 export const TECHNOLOGIES_2: CarouselTecItemProps[] = [
@@ -195,6 +202,10 @@ export const TECHNOLOGIES_2: CarouselTecItemProps[] = [
     name: 'Vite',
     icon: SiVite,
   },
+  {
+    name: 'PostgreSQL',
+    icon: BiLogoPostgresql,
+  },
 ];
 
 interface TechnologyExperienceProps {
@@ -212,9 +223,9 @@ export type TechnologyExperience =
   | (typeof TECHNOLOGIES_2)[number]['name'];
 
 export const TypeIcon = {
-  web: './cartoon/computer.png',
+  web: './cartoon/web-page.png',
   mobile: './cartoon/smartphone.png',
-  fullstack: './cartoon/web-page.png',
+  fullstack: './cartoon/computer.png',
 };
 export const TechnologyIconByName: Record<TechnologyExperience, IconType> = {
   JavaScript: SiJavascript,
@@ -246,6 +257,10 @@ export const TechnologyIconByName: Record<TechnologyExperience, IconType> = {
   pnpm: SiPnpm,
   Netlify: SiNetlify,
   Vite: SiVite,
+  Google: FaGoogle,
+  Prisma: SiPrisma,
+  Express: SiExpress,
+  PostgreSQL: BiLogoPostgresql,
 };
 
 export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [

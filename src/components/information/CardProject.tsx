@@ -13,7 +13,7 @@ interface CardProjectProps {
 
 export const CardProject = ({ project }: CardProjectProps) => {
   return (
-    <div className="flex flex-col p-4 border-2 w-[calc((100%-2rem)/3)] border-magazine-gray bg-magazine-dark rounded-lg gap-2">
+    <div className="flex flex-col p-4 border-2 md:w-[calc((100%-2rem)/3)] w-full border-magazine-gray bg-magazine-dark rounded-lg gap-2">
       <div className="flex flex-row w-full items-center justify-between ">
         <div className=" bg-magazine-gray rounded-lg p-2 w-min-[150px]">
           <p>{project.title}</p>

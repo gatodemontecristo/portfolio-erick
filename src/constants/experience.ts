@@ -1,5 +1,7 @@
 import type { TimeLineItemProps } from '../components/timeline';
 
+export const YEARS_EXPERIENCE: number = 7;
+export const BIRTH_DATE: string = '07-11-1996';
 export const EXPERIENCE: TimeLineItemProps[] = [
   {
     time: 'Mar 2024 - Present',

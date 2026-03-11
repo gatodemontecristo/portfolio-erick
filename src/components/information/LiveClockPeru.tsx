@@ -22,8 +22,8 @@ export const LiveClockPeru = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-4">
-      <div className="text-2xl font-orbitron text-center mb-2">
+    <div className="flex flex-col items-center justify-center md:p-4 p-2">
+      <div className="md:text-2xl text-lg font-orbitron text-center mb-2">
         {formatTime(currentTime)}
       </div>
     </div>
