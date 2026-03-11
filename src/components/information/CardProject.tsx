@@ -19,7 +19,9 @@ export const CardProject = ({ project }: CardProjectProps) => {
           <p>{project.title}</p>
         </div>
         <div className="flex flex-row gap-2 justify-end items-center">
-          <p className="text-magazine-gray text-lg">{project.type}</p>
+          <p className="text-magazine-gray text-lg capitalize">
+            {project.type}
+          </p>
           <div className="h-15 w-15  rounded-full">
             <img src={TypeIcon[project.type]} alt={project.type} />
           </div>

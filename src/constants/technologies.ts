@@ -24,6 +24,8 @@ import {
   SiSonarqubeforide,
   SiJira,
   SiPnpm,
+  SiNetlify,
+  SiVite,
 } from 'react-icons/si';
 import { TbBrandReactNative, TbCircleLetterBFilled } from 'react-icons/tb';
 import { IoLogoFirebase } from 'react-icons/io5';
@@ -185,6 +187,14 @@ export const TECHNOLOGIES_2: CarouselTecItemProps[] = [
     name: 'Zustand',
     icon: GiBearFace,
   },
+  {
+    name: 'Netlify',
+    icon: SiNetlify,
+  },
+  {
+    name: 'Vite',
+    icon: SiVite,
+  },
 ];
 
 interface TechnologyExperienceProps {
@@ -234,6 +244,8 @@ export const TechnologyIconByName: Record<TechnologyExperience, IconType> = {
   Docker: FaDocker,
   GitHub: FaGithub,
   pnpm: SiPnpm,
+  Netlify: SiNetlify,
+  Vite: SiVite,
 };
 
 export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [
