@@ -11,12 +11,14 @@ import {
   CardProject,
 } from '../components';
 import {
+  BIRTH_DATE,
   EXPERIENCE,
   PERSONAL_PROJECTS,
   TECHLOGOS,
   TECHNOLOGIES_1,
   TECHNOLOGIES_2,
   TECHNOLOGIES_EXPERIENCE,
+  YEARS_EXPERIENCE,
 } from '../constants';
 import { TbClockHour7Filled } from 'react-icons/tb';
 import DecryptedText from '../components/gsap/DecryptedText';
@@ -26,6 +28,7 @@ import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
 import { nanoid } from 'nanoid';
+import { getCurrentAgeFromBirthDate } from '../utils';
 
 function App() {
   const handleDownloadResume = () => {
@@ -38,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className="background-container p-4">
+    <div className="background-container md:p-4 p-2">
       <div>
         <CarouselTec
           items={TECHNOLOGIES_1.map(tech => ({
@@ -47,7 +50,7 @@ function App() {
           }))}
         ></CarouselTec>
 
-        <div className="flex flex-row w-full h-67.5 items-center justify-evenly mb-10">
+        <div className="flex md:flex-row flex-col w-full md:h-67.5 h-60 items-center justify-evenly md:mb-10 mb-5">
           <MainTitle text="Hello, I'm Erick Dejo from Peru" />
           <MainTitle text="A front-end web/mobile developer" />
         </div>
@@ -59,16 +62,19 @@ function App() {
           reverse
         ></CarouselTec>
 
-        <div className="flex flex-row border-2 border-magazine-gray rounded-lg overflow-hidden">
+        <div className="flex md:flex-row flex-col border-2 border-magazine-gray rounded-lg overflow-hidden">
           <Portrait></Portrait>
-          <div className="flex flex-col w-1/2 text-magazine-white">
+          <div className="flex flex-col md:w-1/2 w-full text-magazine-white">
             <div className="flex flex-row  w-full">
               <InformationBox
                 label="Age"
                 type="info"
                 icon={<ImMan></ImMan>}
               ></InformationBox>
-              <InformationBox label="29" type="info"></InformationBox>
+              <InformationBox
+                label={getCurrentAgeFromBirthDate(BIRTH_DATE)}
+                type="info"
+              ></InformationBox>
               <InformationBox
                 label="Hour"
                 type="info"
@@ -79,7 +85,7 @@ function App() {
             <div className="flex flex-row  w-full">
               <div className="w-full flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-bold text-4xl border-magazine-gray text-magazine-gray bg-magazine-dark p-8">
                 <DecryptedText
-                  text="Work experience 7 years"
+                  text={`Work experience ${YEARS_EXPERIENCE} years`}
                   speed={120}
                   animateOn="both"
                   revealDirection="start"
@@ -104,7 +110,7 @@ function App() {
         <ScrollVelocity
           texts={['Web applications SPA/SSR', 'Mobile applications']}
           velocity={100}
-          className="custom-scroll-text"
+          className="custom-scroll-text md:text-8xl text-2xl"
         />
       </div>
       <div className="flex flex-row flex-wrap w-full mb-10 gap-4 justify-center items-stretch">

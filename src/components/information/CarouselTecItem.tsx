@@ -7,9 +7,11 @@ export interface CarouselTecItemProps {
 
 export const CarouselTecItem = ({ name, icon: Icon }: CarouselTecItemProps) => {
   return (
-    <div className="flex flex-row items-center justify-center gap-5">
-      <p className="whitespace-nowrap overflow-hidden text-ellipsis">{name}</p>
-      <Icon className="size-6" />
+    <div className="flex flex-row items-center justify-center md:gap-5 gap-2">
+      <p className="whitespace-nowrap overflow-hidden text-ellipsis md:font-md font-sm">
+        {name}
+      </p>
+      <Icon className="md:size-6 size-4" />
     </div>
   );
 };

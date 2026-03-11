@@ -122,12 +122,12 @@ export const CarouselTec = ({ items, reverse = false }: CarouselTecProps) => {
   return (
     <div
       ref={containerRef}
-      className={`overflow-hidden border-2 border-magazine-white bg-magazine-dark text-magazine-gray rounded-lg p-4 mb-4`}
+      className={`overflow-hidden border-2 border-magazine-white bg-magazine-dark text-magazine-gray rounded-lg md:p-4 p-2 mb-4`}
     >
       <motion.div
         ref={itemsContainerRef}
         style={{ x: springX }}
-        className={`flex flex-row gap-4 ${reverse ? 'flex-row-reverse' : ''} will-change-transform`}
+        className={`flex flex-row md:gap-4 gap-2 ${reverse ? 'flex-row-reverse' : ''} will-change-transform`}
       >
         {duplicatedItems.map((item, index) => (
           <CarouselTecItem key={`${nanoid()}-${index}`} {...item} />
