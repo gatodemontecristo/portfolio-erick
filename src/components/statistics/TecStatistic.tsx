@@ -5,7 +5,7 @@ import { LevelBar } from './LevelBar';
 export const TecStatistic = (props: TechnologyExperienceItemProps) => {
   return (
     <>
-      <div className="w-2/3 flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-semibold md:text-xl text-base border-magazine-gray text-magazine-gray bg-magazine-dark md:p-4 p-2">
+      <div className="w-2/3 flex flex-row items-center justify-center border-r-2 border-b-2  gap-3 font-semibold md:text-xl text-base text-center border-magazine-gray text-magazine-gray bg-magazine-dark md:p-4 p-2">
         <DecryptedText
           text={props.name}
           speed={120}
@@ -14,7 +14,7 @@ export const TecStatistic = (props: TechnologyExperienceItemProps) => {
           sequential
           useOriginalCharsOnly={false}
         />
-        <props.icon></props.icon>
+        <props.icon className="md:flex hidden size-8"></props.icon>
       </div>
       <LevelBar level={props.level}></LevelBar>
     </>

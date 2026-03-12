@@ -32,7 +32,7 @@ export const LevelBar = ({ level }: LevelBarProps) => {
   const allBars = [...filledBars, ...emptyBars];
 
   return (
-    <div className="w-1/3 flex flex-col items-start justify-center border-r-2 border-b-2 gap-1 font-semibold text-2xl border-magazine-gray bg-magazine-dark p-4">
+    <div className="w-1/3 flex flex-col items-start justify-center border-r-2 border-b-2 gap-1 font-semibold text-2xl border-magazine-gray bg-magazine-dark md:p-4 p-2">
       <p className="text-[10px]">Level</p>
       <div className="flex flex-row md:gap-1 gap-0.5">
         {allBars.map(bar => (

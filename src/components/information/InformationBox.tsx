@@ -19,7 +19,7 @@ export const InformationBox = ({ label, type, icon }: InformationBoxProps) => {
             sequential
             useOriginalCharsOnly={false}
           />
-          {icon}
+          <div className="md:flex hidden">{icon}</div>
         </>
       ) : (
         <LiveClockPeru />

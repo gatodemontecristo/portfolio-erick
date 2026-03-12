@@ -28,8 +28,10 @@ import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
 import { getCurrentAgeFromBirthDate } from '../utils';
+import { useWidth } from '../hooks';
 
 function App() {
+  const { isDesktop } = useWidth();
   const handleDownloadResume = () => {
     const link = document.createElement('a');
     link.href = resumeFile;
@@ -68,7 +70,7 @@ function App() {
               <InformationBox
                 label="Age"
                 type="info"
-                icon={<ImMan></ImMan>}
+                icon={<ImMan className="size-8"></ImMan>}
               ></InformationBox>
               <InformationBox
                 label={getCurrentAgeFromBirthDate(BIRTH_DATE)}
@@ -77,7 +79,9 @@ function App() {
               <InformationBox
                 label="Hour"
                 type="info"
-                icon={<TbClockHour7Filled></TbClockHour7Filled>}
+                icon={
+                  <TbClockHour7Filled className="size-8"></TbClockHour7Filled>
+                }
               ></InformationBox>
               <InformationBox type="clock"></InformationBox>
             </div>
@@ -115,19 +119,21 @@ function App() {
 
       <div className="flex flex-col border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4">
         <div className={`overflow-hidden flex flex-row border-b-2`}>
-          <div className="flex flex-col p-4 w-1/4 border-r-2 border-magazine-gray">
-            <MagnetLines
-              rows={10}
-              columns={10}
-              containerSize="20vmin"
-              lineColor="#fff8df"
-              lineWidth="2px"
-              lineHeight="10px"
-              baseAngle={0}
-              style={{ margin: '0rem auto' }}
-            />{' '}
-          </div>
-          <div className="flex flex-col justify-center items-center w-3/4 p-4 gap-4">
+          {isDesktop && (
+            <div className="flex flex-col p-4 w-1/4 border-r-2 border-magazine-gray">
+              <MagnetLines
+                rows={10}
+                columns={10}
+                containerSize="20vmin"
+                lineColor="#fff8df"
+                lineWidth="2px"
+                lineHeight="10px"
+                baseAngle={0}
+                style={{ margin: '0rem auto' }}
+              />{' '}
+            </div>
+          )}
+          <div className="flex flex-col justify-center items-center md:w-3/4 w-full p-4 gap-4">
             <DecryptedText
               text="My social networks"
               speed={60}
@@ -140,9 +146,9 @@ function App() {
             <div className="relative w-full">
               <LogoLoop
                 logos={TECHLOGOS}
-                speed={100}
+                speed={80}
                 direction="left"
-                logoHeight={60}
+                logoHeight={isDesktop ? 60 : 40}
                 gap={60}
                 hoverSpeed={0}
                 scaleOnHover
@@ -154,7 +160,7 @@ function App() {
           </div>
         </div>
         <div className={`overflow-hidden flex flex-row `}>
-          <div className="flex flex-row justify-center items-center w-3/4 bg-magazine-gray gap-4 border-e-2 border-magazine-gray">
+          <div className="flex flex-row justify-center items-center md:w-3/4 w-full bg-magazine-gray gap-4 border-e-2 border-magazine-gray">
             <div className="flex flex-row justify-center items-center gap-4">
               <div className="flex flex-col gap-1 md:text-2xl text-xl text-magazine-dark">
                 <DecryptedText
@@ -177,23 +183,25 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col relative  h-50  w-1/4 bg-magazine-dark  border-e-2 border-magazine-gray">
-            <div className="absolute top-10 left-1/3">
-              <Cubes
-                gridSize={8}
-                maxAngle={45}
-                radius={3}
-                borderStyle="1px solid #fff8df"
-                faceColor="#333"
-                rippleColor="#333"
-                rippleSpeed={1.5}
-                autoAnimate
-                rippleOnClick
-                cellGap={8}
-                cubeSize={10}
-              />
+          {isDesktop && (
+            <div className="flex flex-col relative  h-50  w-1/4 bg-magazine-dark  border-e-2 border-magazine-gray">
+              <div className="absolute top-10 left-1/3">
+                <Cubes
+                  gridSize={8}
+                  maxAngle={45}
+                  radius={3}
+                  borderStyle="1px solid #fff8df"
+                  faceColor="#333"
+                  rippleColor="#333"
+                  rippleSpeed={1.5}
+                  autoAnimate
+                  rippleOnClick
+                  cellGap={8}
+                  cubeSize={10}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       <ProjectSection title="Personal projects" projects={PERSONAL_PROJECTS} />

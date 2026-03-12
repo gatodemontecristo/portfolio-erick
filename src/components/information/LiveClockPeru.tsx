@@ -23,7 +23,7 @@ export const LiveClockPeru = () => {
 
   return (
     <div className="flex flex-col items-center justify-center md:p-4 p-2">
-      <div className="md:text-2xl text-lg font-orbitron text-center mb-2">
+      <div className="md:text-2xl text-base font-orbitron text-center">
         {formatTime(currentTime)}
       </div>
     </div>
