@@ -15,7 +15,7 @@ export const Portrait = () => {
     <div ref={ref} className="md:w-1/2 w-full overflow-hidden">
       <motion.div
         style={{ scale }}
-        className="md:h-full h-[50vh]  bg-[url('./photo-erick.jpeg')] bg-cover bg-center"
+        className="md:h-full h-[50vh]  bg-[url('/photo-erick.jpeg')] bg-cover bg-center"
       />
     </div>
   );
