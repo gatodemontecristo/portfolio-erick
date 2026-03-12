@@ -9,6 +9,8 @@ import {
   LogoLoop,
   TimeLine,
   ProjectSection,
+  CubesDeco,
+  MagnetDeco,
 } from '../components';
 import {
   BIRTH_DATE,
@@ -22,8 +24,6 @@ import {
 } from '../constants';
 import { TbClockHour7Filled } from 'react-icons/tb';
 import DecryptedText from '../components/gsap/DecryptedText';
-import MagnetLines from '../components/gsap/MagnetLines';
-import Cubes from '../components/gsap/Cubes';
 import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
@@ -119,20 +119,7 @@ function App() {
 
       <div className="flex flex-col border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4">
         <div className={`overflow-hidden flex flex-row border-b-2`}>
-          {isDesktop && (
-            <div className="flex flex-col p-4 w-1/4 border-r-2 border-magazine-gray">
-              <MagnetLines
-                rows={10}
-                columns={10}
-                containerSize="20vmin"
-                lineColor="#fff8df"
-                lineWidth="2px"
-                lineHeight="10px"
-                baseAngle={0}
-                style={{ margin: '0rem auto' }}
-              />{' '}
-            </div>
-          )}
+          {isDesktop && <MagnetDeco></MagnetDeco>}
           <div className="flex flex-col justify-center items-center md:w-3/4 w-full p-4 gap-4">
             <DecryptedText
               text="My social networks"
@@ -161,8 +148,8 @@ function App() {
         </div>
         <div className={`overflow-hidden flex flex-row `}>
           <div className="flex flex-row justify-center items-center md:w-3/4 w-full bg-magazine-gray gap-4 border-e-2 border-magazine-gray">
-            <div className="flex flex-row justify-center items-center gap-4">
-              <div className="flex flex-col gap-1 md:text-2xl text-xl text-magazine-dark">
+            <div className="flex flex-row justify-center items-center md:gap-4 gap-2 md:p-0 p-2">
+              <div className="flex flex-col gap-1 md:text-2xl text-lg text-center text-magazine-dark">
                 <DecryptedText
                   text="This is my resume, let's stay in touch!"
                   speed={60}
@@ -173,35 +160,17 @@ function App() {
                 />
                 <button
                   onClick={handleDownloadResume}
-                  className="bg-magazine-dark md:text-2xl text-xl py-2 cursor-pointer hover:bg-[#474747] text-magazine-gray"
+                  className="bg-magazine-dark md:text-2xl text-lg py-2 cursor-pointer hover:bg-[#474747] text-magazine-gray"
                 >
                   Download Resume
                 </button>
               </div>
-              <div className="w-30 flex flex-col">
+              <div className="md:w-30 w-25 flex flex-col">
                 <img src="./cartoon.png" alt="Erick cartoon 60's" />
               </div>
             </div>
           </div>
-          {isDesktop && (
-            <div className="flex flex-col relative  h-50  w-1/4 bg-magazine-dark  border-e-2 border-magazine-gray">
-              <div className="absolute top-10 left-1/3">
-                <Cubes
-                  gridSize={8}
-                  maxAngle={45}
-                  radius={3}
-                  borderStyle="1px solid #fff8df"
-                  faceColor="#333"
-                  rippleColor="#333"
-                  rippleSpeed={1.5}
-                  autoAnimate
-                  rippleOnClick
-                  cellGap={8}
-                  cubeSize={10}
-                />
-              </div>
-            </div>
-          )}
+          {isDesktop && <CubesDeco></CubesDeco>}
         </div>
       </div>
       <ProjectSection title="Personal projects" projects={PERSONAL_PROJECTS} />
