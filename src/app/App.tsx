@@ -177,7 +177,7 @@ function App() {
       <TimeLine
         items={EXPERIENCE}
         title="Work experience timeline"
-        className="text-magazine-white"
+        className="md:text-magazine-white text-magazine-dark"
       />
     </div>
   );

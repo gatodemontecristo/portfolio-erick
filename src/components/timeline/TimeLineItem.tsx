@@ -20,7 +20,7 @@ export const TimeLineItem = ({
       contentStyle={{ background: '#fff8df ', color: '#333' }}
       contentArrowStyle={{ borderRight: '7px solid  #fff8df ' }}
       date={time}
-      dateClassName="text-magazine-white"
+      dateClassName="md:text-magazine-white text-magazine-dark"
       iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
       icon={
         <img
