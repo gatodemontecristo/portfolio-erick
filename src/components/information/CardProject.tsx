@@ -6,6 +6,7 @@ import {
 } from '../../constants';
 import { CardProjectItem } from './CardProjectItem';
 import { nanoid } from 'nanoid';
+import AnimatedContent from '../gsap/AnimatedContent';
 
 interface CardProjectProps {
   project: PersonalProjectProps;
@@ -13,7 +14,19 @@ interface CardProjectProps {
 
 export const CardProject = ({ project }: CardProjectProps) => {
   return (
-    <div className="flex flex-col p-4 border-2 md:w-[calc((100%-2rem)/3)] w-full border-magazine-gray bg-magazine-dark rounded-lg gap-2">
+    <AnimatedContent
+      distance={100}
+      direction="vertical"
+      reverse={false}
+      duration={0.8}
+      ease="power3.out"
+      initialOpacity={0}
+      animateOpacity
+      scale={1}
+      threshold={0.1}
+      delay={0}
+      className="flex flex-col p-4 border-2 md:w-[calc((100%-2rem)/3)] w-full border-magazine-gray bg-magazine-dark rounded-lg gap-2"
+    >
       <div className="flex flex-row w-full items-center justify-between ">
         <div className=" bg-magazine-gray rounded-lg md:p-2 p-1 md:text-base text-sm md:w-min-[150px] w-min-[100px]">
           <p>{project.title}</p>
@@ -62,6 +75,6 @@ export const CardProject = ({ project }: CardProjectProps) => {
       <div className="flex flex-row rounded-lg overflow-hidden m-2">
         <img src={project.image} alt={`${project.title} project screenshot`} />
       </div>
-    </div>
+    </AnimatedContent>
   );
 };

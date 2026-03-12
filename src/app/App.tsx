@@ -11,6 +11,7 @@ import {
   CubesDeco,
   MagnetDeco,
   SocialLoop,
+  Footer,
 } from '../components';
 import {
   BIRTH_DATE,
@@ -159,6 +160,7 @@ function App() {
         title="Work experience timeline"
         className="md:text-magazine-white text-magazine-dark"
       />
+      <Footer />
     </div>
   );
 }
