@@ -8,7 +8,7 @@ import {
   InformationBox,
   LogoLoop,
   TimeLine,
-  CardProject,
+  ProjectSection,
 } from '../components';
 import {
   BIRTH_DATE,
@@ -27,7 +27,6 @@ import Cubes from '../components/gsap/Cubes';
 import resumeFile from '../assets/files/ERICK DEJO_2025_2.pdf';
 
 import 'react-vertical-timeline-component/style.min.css';
-import { nanoid } from 'nanoid';
 import { getCurrentAgeFromBirthDate } from '../utils';
 
 function App() {
@@ -83,7 +82,7 @@ function App() {
               <InformationBox type="clock"></InformationBox>
             </div>
             <div className="flex flex-row  w-full">
-              <div className="w-full flex flex-row items-center justify-center border-r-2 border-b-2  gap-4 font-bold text-4xl border-magazine-gray text-magazine-gray bg-magazine-dark p-8">
+              <div className="w-full flex flex-row text-center items-center justify-center border-r-2 border-b-2  gap-4 font-bold md:text-4xl text-2xl border-magazine-gray text-magazine-gray bg-magazine-dark md:p-8 p-6">
                 <DecryptedText
                   text={`Work experience ${YEARS_EXPERIENCE} years`}
                   speed={120}
@@ -113,11 +112,6 @@ function App() {
           className="custom-scroll-text md:text-8xl text-2xl"
         />
       </div>
-      <div className="flex flex-row flex-wrap w-full mb-10 gap-4 justify-center items-stretch">
-        {PERSONAL_PROJECTS.map(project => (
-          <CardProject key={nanoid()} project={project} />
-        ))}
-      </div>
 
       <div className="flex flex-col border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4">
         <div className={`overflow-hidden flex flex-row border-b-2`}>
@@ -141,7 +135,7 @@ function App() {
               revealDirection="start"
               sequential
               useOriginalCharsOnly={false}
-              className="text-2xl text-magazine-gray"
+              className="md:text-2xl text-xl text-magazine-gray"
             />
             <div className="relative w-full">
               <LogoLoop
@@ -162,7 +156,7 @@ function App() {
         <div className={`overflow-hidden flex flex-row `}>
           <div className="flex flex-row justify-center items-center w-3/4 bg-magazine-gray gap-4 border-e-2 border-magazine-gray">
             <div className="flex flex-row justify-center items-center gap-4">
-              <div className="flex flex-col gap-1 text-2xl text-magazine-dark">
+              <div className="flex flex-col gap-1 md:text-2xl text-xl text-magazine-dark">
                 <DecryptedText
                   text="This is my resume, let's stay in touch!"
                   speed={60}
@@ -173,7 +167,7 @@ function App() {
                 />
                 <button
                   onClick={handleDownloadResume}
-                  className="bg-magazine-dark text-2xl py-2 cursor-pointer hover:bg-[#474747] text-magazine-gray"
+                  className="bg-magazine-dark md:text-2xl text-xl py-2 cursor-pointer hover:bg-[#474747] text-magazine-gray"
                 >
                   Download Resume
                 </button>
@@ -202,6 +196,7 @@ function App() {
           </div>
         </div>
       </div>
+      <ProjectSection title="Personal projects" projects={PERSONAL_PROJECTS} />
       <TimeLine
         items={EXPERIENCE}
         title="Work experience timeline"

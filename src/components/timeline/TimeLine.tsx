@@ -13,7 +13,7 @@ interface TimeLineProps {
 }
 export const TimeLine = ({ items, className, title }: TimeLineProps) => {
   return (
-    <div className="flex flex-col w-full items-center justify-center gap-8 mt-10">
+    <div className="flex flex-col w-full items-center justify-center gap-12 mt-10">
       <TextType
         text={[title]}
         typingSpeed={75}
@@ -24,7 +24,7 @@ export const TimeLine = ({ items, className, title }: TimeLineProps) => {
         variableSpeed={{ min: 60, max: 120 }}
         cursorBlinkDuration={0.5}
         loop={false}
-        className="text-magazine-gray text-4xl font-extrabold text-start"
+        className="text-magazine-gray text-6xl font-extrabold text-start"
       />
       <VerticalTimeline className={` ${className}`}>
         {items.map(item => (

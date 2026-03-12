@@ -13,7 +13,7 @@ const BarItem = ({ type, index }: BarItemProps) => {
   return (
     <div
       data-bar-index={index}
-      className={`h-8 w-4 ${type === 'filled' ? 'bg-magazine-gray' : 'border-2 border-magazine-gray bg-none'}`}
+      className={`md:h-8 h-6 md:w-4 w-2 ${type === 'filled' ? 'bg-magazine-gray' : 'border-2 border-magazine-gray bg-none'}`}
       style={{ opacity: 0, transform: 'translateY(20px)' }}
     ></div>
   );
@@ -33,8 +33,8 @@ export const LevelBar = ({ level }: LevelBarProps) => {
 
   return (
     <div className="w-1/3 flex flex-col items-start justify-center border-r-2 border-b-2 gap-1 font-semibold text-2xl border-magazine-gray bg-magazine-dark p-4">
-      <p className="text-sm">Level</p>
-      <div className="flex flex-row gap-1">
+      <p className="text-[10px]">Level</p>
+      <div className="flex flex-row md:gap-1 gap-0.5">
         {allBars.map(bar => (
           <BarItem key={nanoid()} type={bar.type} index={bar.index} />
         ))}
