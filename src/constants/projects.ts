@@ -28,7 +28,7 @@ export const PERSONAL_PROJECTS: PersonalProjectProps[] = [
     type: 'fullstack',
   },
   {
-    title: 'NASA Space Challenge',
+    title: 'NASA Challenge',
     description:
       '2025 NASA Space Apps Challenge - Team 4 Elementors. Advanced geospatial intelligence platform integrating Earth observation data with urban planning methodologies for sustainable city development',
     technologies: ['Typescript', 'Next.js', 'Zustand', 'TanStack', 'Google'],

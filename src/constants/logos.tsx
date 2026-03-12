@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
 
-interface TechLogo {
+export interface TechLogo {
   node: JSX.Element;
   title: string;
   href: string;

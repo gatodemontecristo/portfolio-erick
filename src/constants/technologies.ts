@@ -273,7 +273,7 @@ export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [
     pair2: {
       name: 'React',
       icon: FaReact,
-      level: 3,
+      level: 4,
     },
   },
   {
@@ -285,14 +285,14 @@ export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [
     pair2: {
       name: 'TanStack',
       icon: GiIsland,
-      level: 3,
+      level: 4,
     },
   },
   {
     pair1: {
       name: 'AWS',
       icon: FaAws,
-      level: 4,
+      level: 3,
     },
     pair2: {
       name: 'Docker',
@@ -309,18 +309,18 @@ export const TECHNOLOGIES_EXPERIENCE: TechnologyExperienceProps[] = [
     pair2: {
       name: 'Tailwind CSS',
       icon: SiTailwindcss,
-      level: 3,
+      level: 4,
     },
   },
   {
     pair1: {
-      name: 'Jest',
-      icon: SiJest,
+      name: 'Storybook',
+      icon: SiStorybook,
       level: 4,
     },
     pair2: {
-      name: 'Tailwind CSS',
-      icon: SiTailwindcss,
+      name: 'Figma',
+      icon: FaFigma,
       level: 3,
     },
   },
