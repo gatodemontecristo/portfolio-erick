@@ -6,11 +6,11 @@ import {
   AnimatedTecStatistics,
   Portrait,
   InformationBox,
-  LogoLoop,
   TimeLine,
   ProjectSection,
   CubesDeco,
   MagnetDeco,
+  SocialLoop,
 } from '../components';
 import {
   BIRTH_DATE,
@@ -120,31 +120,11 @@ function App() {
       <div className="flex flex-col border-2 border-magazine-magazine bg-magazine-dark text-magazine-gray rounded-lg mb-4">
         <div className={`overflow-hidden flex flex-row border-b-2`}>
           {isDesktop && <MagnetDeco></MagnetDeco>}
-          <div className="flex flex-col justify-center items-center md:w-3/4 w-full p-4 gap-4">
-            <DecryptedText
-              text="My social networks"
-              speed={60}
-              animateOn="both"
-              revealDirection="start"
-              sequential
-              useOriginalCharsOnly={false}
-              className="md:text-2xl text-xl text-magazine-gray"
-            />
-            <div className="relative w-full">
-              <LogoLoop
-                logos={TECHLOGOS}
-                speed={80}
-                direction="left"
-                logoHeight={isDesktop ? 60 : 40}
-                gap={60}
-                hoverSpeed={0}
-                scaleOnHover
-                fadeOut={false}
-                fadeOutColor="#ffffff"
-                ariaLabel="Technology partners"
-              />
-            </div>
-          </div>
+          <SocialLoop
+            isDesktop={isDesktop}
+            logos={TECHLOGOS}
+            title="My social networks"
+          ></SocialLoop>
         </div>
         <div className={`overflow-hidden flex flex-row `}>
           <div className="flex flex-row justify-center items-center md:w-3/4 w-full bg-magazine-gray gap-4 border-e-2 border-magazine-gray">
